@@ -18,17 +18,14 @@ The first successful fetch of a site only saves a baseline (no email). You'll be
 
 ## Setup
 
-In the repo's **Settings → Secrets and variables → Actions**, add these repository secrets:
+Email goes out through MailerSend SMTP (`smtp.mailersend.net`, port 587, set in `.github/workflows/check.yml`). In the repo's **Settings → Secrets and variables → Actions**, add these repository secrets:
 
 | Secret | Required | Notes |
 |---|---|---|
-| `SMTP_HOST` | yes | SMTP server hostname, e.g. `smtp.gmail.com` |
-| `SMTP_FROM_EMAIL` | yes | "From" address; must be allowed by your SMTP provider |
-| `ALERT_TO_EMAIL` | yes | Where alerts go; separate several addresses with commas |
-| `SMTP_USERNAME` | usually | SMTP login. Login is skipped if this or the password is missing |
-| `SMTP_PASSWORD` | usually | SMTP password (for Gmail, use an App Password) |
-| `SMTP_PORT` | no | Defaults to `587` (STARTTLS); use `465` for implicit SSL |
-| `SMTP_FROM_NAME` | no | Defaults to "USA Dental Report Board Monitor" |
+| `MAILERSEND_SMTP_USER` | yes | MailerSend SMTP username |
+| `MAILERSEND_SMTP_PASS` | yes | MailerSend SMTP password |
+| `MAILERSEND_FROM` | yes | "From" address; must be on a domain verified in MailerSend |
+| `NOTIFY_EMAIL` | yes | Where alerts go; separate several addresses with commas |
 
 If any required secret is missing, the job still checks every site and saves the results, but it skips the email. The run log then says `Not sending email: ... is not set`.
 
