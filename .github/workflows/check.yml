@@ -30,13 +30,13 @@ jobs:
 
       - name: Run site check
         env:
-          SMTP_HOST: ${{ secrets.SMTP_HOST }}
-          SMTP_PORT: ${{ secrets.SMTP_PORT }}
-          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
-          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
-          SMTP_FROM_EMAIL: ${{ secrets.SMTP_FROM_EMAIL }}
-          SMTP_FROM_NAME: ${{ secrets.SMTP_FROM_NAME }}
-          ALERT_TO_EMAIL: ${{ secrets.ALERT_TO_EMAIL }}
+          # MailerSend SMTP. Host/port are public; credentials come from repo secrets.
+          SMTP_HOST: smtp.mailersend.net
+          SMTP_PORT: "587"
+          SMTP_USERNAME: ${{ secrets.MAILERSEND_SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.MAILERSEND_SMTP_PASS }}
+          SMTP_FROM_EMAIL: ${{ secrets.MAILERSEND_FROM }}
+          ALERT_TO_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
         run: python scripts/check_sites.py
 
       - name: Commit updated state
