@@ -1,11 +1,11 @@
 # Dental Board Newsroom Monitor
 
-Checks state dental board newsroom/updates pages daily and emails you (via SMTP) when one changes. Built for USA Dental Report.
+Checks state dental board newsroom/updates pages weekly and emails you (via SMTP) when one changes. Built for USA Dental Report.
 
 ## How it works
 
 1. `data/sites.json` lists each state, board name, and its News URL (pulled from your spreadsheet — 35 states currently have one; the rest didn't have a News URL in column G and were left out).
-2. Every day at 13:00 UTC, a GitHub Action runs `scripts/check_sites.py`, which:
+2. Every Monday at 13:00 UTC, a GitHub Action runs `scripts/check_sites.py`, which:
    - Fetches each page
    - Strips nav/header/footer/script/style noise, keeping just the readable text
    - Hashes that text and compares it to the last stored hash (`data/state/<slug>.json` + `.txt`)
@@ -26,7 +26,7 @@ The first run for any site just establishes a baseline (no email) — you'll onl
    - `ALERT_TO_EMAIL` — where you want alerts sent (comma-separate for multiple addresses)
    - `SMTP_PORT` — optional, defaults to `587` (STARTTLS); use `465` for implicit SSL
    - `SMTP_FROM_NAME` — optional, defaults to "USA Dental Report Board Monitor"
-3. That's it — the workflow (`.github/workflows/check.yml`) is already wired to a daily cron (`0 13 * * *`) and can also be triggered manually from the Actions tab (`workflow_dispatch`).
+3. That's it — the workflow (`.github/workflows/check.yml`) is already wired to a weekly cron (`0 13 * * 1`, Mondays) and can also be triggered manually from the Actions tab (`workflow_dispatch`).
 
 ## Adding/editing sites
 
