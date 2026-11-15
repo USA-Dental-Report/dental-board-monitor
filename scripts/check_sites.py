@@ -59,7 +59,7 @@ REQUEST_TIMEOUT = 25
 
 # Several state boards sit behind WAFs (Akamai, Cloudflare, Imperva) that
 # reject self-identifying bot user-agents outright. We fetch one public
-# newsroom page per site per day, so presenting as an ordinary browser is
+# newsroom page per site per week, so presenting as an ordinary browser is
 # both accurate about our load and necessary to get a response at all.
 # Accept-Encoding is deliberately NOT set here: requests advertises only what
 # it can actually decode (brotli included, via the brotli dependency).
