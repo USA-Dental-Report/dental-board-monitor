@@ -1,8 +1,6 @@
 {
-  "hash": "4b6bc8205c1cf030a386826442fe984fc3adb01854ba4ec9d9b21aacd485ad84",
-  "last_checked": "2026-11-15T19:12:15.343040+00:00",
-  "last_changed": "2026-11-11T19:54:09.270851+00:00",
-  "consecutive_failures": 7,
-  "last_error": "403 Client Error: Forbidden for url: https://guamhplo.org/happenings/gbed/news",
-  "last_failed": "2026-11-16T22:45:39.039792+00:00"
+  "hash": "dceb5078b131017919d63e8865e204d5f15765c26cd33939f203ae32ea479774",
+  "last_checked": "2026-11-24T00:37:47.940717+00:00",
+  "last_changed": "2026-11-24T00:37:47.940717+00:00",
+  "consecutive_failures": 0
 }

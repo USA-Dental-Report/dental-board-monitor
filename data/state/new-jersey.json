@@ -2,5 +2,7 @@
   "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "last_checked": "2026-11-16T22:45:41.694204+00:00",
   "last_changed": "2026-07-22T14:52:24.909937+00:00",
-  "consecutive_failures": 0
+  "consecutive_failures": 1,
+  "last_error": "404 Client Error: Not Found for url: https://dca.njoag.gov/News/Pages/pressreleases.aspx",
+  "last_failed": "2026-11-24T00:37:52.613812+00:00"
 }

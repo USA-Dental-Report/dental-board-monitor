@@ -21,7 +21,7 @@ Disciplinary Actions
 Health News
 News Archives
 2026
-(125)
+(130)
 2025
 (237)
 2024
@@ -30,6 +30,10 @@ News Archives
 (11)
 RSS
 25 Latest Articles
+Nov 19
+Washington State Department of Health honors rural health heroes on National Rural Health Day
+Nov 17
+West Coast Health Alliance joint statement on US measles elimination status
 Nov 03
 State revokes, suspends licenses, certifications, registrations of health care providers (November 3, 2026)
 Oct 27
@@ -76,7 +80,3 @@ May 15
 Washington health officials assisting with hantavirus investigations involving two different virus strains in two separate events
 May 04
 Washington State Department of Health honors drinking water heroes during National Drinking Water Week
-Apr 30
-Recent measles cases in Washington raise concern about undetected community spread
-Apr 29
-2025 Healthy Youth Survey results point to steady course in Washington youth well-being
